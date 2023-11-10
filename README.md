@@ -1,8 +1,17 @@
-# React + Vite
+## Clonando e executando a aplicação localmente
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Clone o projeto para o dispositivo local
 
-Currently, two official plugins are available:
+Instale todos os pacotes npm. Entre na raiz do projeto e insira o seguinte comando para instalar todos os pacotes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+```
+
+Para executar a aplicação, basta inserir o seguinte comando.
+
+```bash
+npm run dev
+```
+
+Aplicação estará executando em **localhost:5173**
