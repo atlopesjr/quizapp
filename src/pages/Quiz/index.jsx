@@ -45,21 +45,22 @@ export function Quiz() {
   }, []);
 
   return (
-    <div className="quiz">
+    <>
       <Header username={auth.username} />
+      <div className="quiz">
+        {isLoading && <h1>Carregando...</h1>}
 
-      {isLoading && <h1>Carregando...</h1>}
+        {!isLoading && showScore && (
+          <Score questionsQuantity={questions.length} correctAnswer={score} />
+        )}
 
-      {!isLoading && showScore && (
-        <Score questionsQuantity={questions.length} correctAnswer={score} />
-      )}
-
-      {!isLoading && !showScore && (
-        <Question
-          question={questions[currentQuestion]}
-          handleAnswerOptionClick={handleAnswerOptionClick}
-        />
-      )}
-    </div>
+        {!isLoading && !showScore && (
+          <Question
+            question={questions[currentQuestion]}
+            handleAnswerOptionClick={handleAnswerOptionClick}
+          />
+        )}
+      </div>
+    </>
   );
 }
